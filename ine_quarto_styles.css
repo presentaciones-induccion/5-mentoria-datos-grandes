@@ -235,11 +235,11 @@ Settings for columns
   display: flex;
 }
 
-.column {
+/* .column {
   flex: 1;
   padding: 20px;
   text-align: center;
-}
+} */
 
 .column img {
   max-width: 100%;

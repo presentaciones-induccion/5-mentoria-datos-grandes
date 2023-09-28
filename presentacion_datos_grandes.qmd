@@ -37,155 +37,279 @@ format:
 
 [**Mentoría Grandes Volúmenes de Datos**]{.big-par .center-justified}
 
-[**Proyecto Estratégico Servicios Compartidos para la Producción Estadística**]{.big-par .center-justified}
+[**Proyecto Ciencia de Datos**]{.big-par .center-justified}
 
-[**Inducción - Septiembre 2023**]{.big-par .center-justified}
+[**Octubre 2023**]{.big-par .center-justified}
 
 
-## Grandes Volúmenes de Datos 
-
-. . .
-
-Esta actividad de capacitación se enmarca en el **PE SSCC**...
+## Tabla de contenidos 
 
 . . .
 
-El PE SSCC es uno de los 4 proyectos estratégicos actualmente en funcionamiento en el INE (2018-2022)...
+</br>
+
+**Problema y Desafíos asociados**
 
 . . .
 
-Este proyecto busca:
+</br>
+
+**Herramientas para datos grandes**
+
+. . .
+
+</br>
+
+**Test realizados**
+
+. . .
+
+</br>
+
+**Resultados tests**
+
+. . .
+
+</br>
+
+**Conclusión**
 
 . . .
 
 
-[*"Proveer a la institución de estándares y desarrollos que permitan [automatizar]{.red}, [estandarizar]{.red}, [ordenar]{.red}, e [innovar]{.red} en la producción estadística, permitiendo reducir [tiempos]{.red} y [costos]{.red} del procesamiento y análisis de las diferentes operaciones estadísticas del INE y minimizando la probabilidad de [errores]{.red} en la publicación de resultados".*]{.medium-par}
-
-
-## Objetivos del proyecto 
+## Problema y Desafíos
 
 </br>
 
 . . .
 
-Al finalizar la capacitación se espera que las/os participantes:
+Como parte del Censo 2024, es necesaria la creación de variables auxiliares para la validación de los datos.
+
+. . .
+
+Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo que conlleva varios desafíos:
 
 ::: {.incremental .medium-par}
-- **Estén familiarizados con el lenguaje de programación R** y cuenten con las habilidades necesarias para **profundizar aspectos de su interés** en este lenguaje. <br><br>
-- Sean capaces de **explorar** y **transformar** objetos en R. <br><br>
-- Manejen herramientas de **visualización** en R. <br><br>
-- Aprendan **buenas prácticas de escritura de código** en R. <br><br>
-- Conozcan **recomendaciones** que les permitan hacer **reproducibles** y **trazables** sus rutinas en R.
-:::
-
-## Contenidos de la presentación 
-
-. . .
-
-</br>
-
-**Sesión 1:** Introducción y herramientas de exploración de datos
-
-    - ¿Qué es R y por qué usarlo?
-    - La interfaz de R Studio
-    - Tipos de datos y operaciones básicas
-    - Exploración y manipulación básica de un data frame
-
-. . .
-
-</br>
-
-**Sesión 2:** Procesamiento de bases de datos (1)
-
-    - Importación de datos desde distintos formatos a R
-    - Introducción a dplyr
-    - Manipulación básica de columnas (select(), rename())
-    - Manipulación básica de filas (arrange(), filter())
-    - Herramientas básicas de edición de datos (if_else())
-
-
-## ¿Volúmenes grandes de datos? 
-
-. . .
-
-<!---
- ![](https://github.com/kjhealy/england_wales_pop/raw/master/figures/eng-wa-pop-pyr-labs-opt.gif){.absolute top="100" left="30" width="500" height="550"} 
---->
-
-<!---
- . . . 
---->
-
-<!---
- ![](https://revolution-computing.typepad.com/.a/6a010534b1db25970b01b8d1a4d670970c-pi){.absolute .fragment top="100" right="80" width="450"} 
---->
-
-
-<!---
- [<img src="https://github.com/kjhealy/england_wales_pop/raw/master/figures/eng-wa-pop-pyr-labs-opt.gif" width="70%"/>]{.pull-left}  
---->
-
-[<img src="https://github.com/kjhealy/england_wales_pop/raw/master/figures/eng-wa-pop-pyr-labs-opt.gif" width="70%"/>]{.absolute top="100" left="70" width="500" height="550"}
-
-<!---
- [<img src="https://revolution-computing.typepad.com/.a/6a010534b1db25970b01b8d1a4d670970c-pi" height="300" width="400"/>]{.pull-right}  
---->
-
-[<img src="https://revolution-computing.typepad.com/.a/6a010534b1db25970b01b8d1a4d670970c-pi" height="300" width="400"/>]{.absolute .fragment top="100" right="60" width="450"} 
-
-
-## Herramientas para grandes volúmenes de datos
-
-![](imagenes/logo_apache_arrow.png){.absolute top=150 left=300 width="200" height="200"}
-
-![](imagenes/logo_apache_spark.png){.absolute top=150 left=600 width="200" height="200"}
-
-![](imagenes/logo_datatable.png){.absolute top=400 left=300 width="200" height="200"}
-
-![](imagenes/logo_duckdb.png){.absolute top=425 left=600 width="200" height="150"}
-
-
-## Herramientas para grandes volúmenes de datos 
-
-**Apache Spark:**
-
-::: {.medium-par}
-- Architecture. <br><br>
-- Main characteristics. <br><br>
+- Cargar, procesar y escribir grandes volúmenes de datos (20M+ de registros) en el menor tiempo posible. <br>
+- Procesar datos de manera confiable... <br>
+- Explorar diferentes herramientas disponibles para el tratamiento de grandes volúmenes de datos. <br>
+- Evaluar tests consistentes en diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas. <br>
 :::
 
 
-## Herramientas para grandes volúmenes de datos 
+## Herramientas para datos grandes
+
+. . .
+
+![](imagenes/logo_apache_arrow.png){.absolute top=150 left=100 width="170" height="150"}
+![](imagenes/github_arrow_01.png){.absolute top=100 left=100 width="350" height="50"}
+![](imagenes/github_arrow_02.png){.absolute top=150 left=300 width="150" height="200"}
+
+. . .
+
+![](imagenes/logo_apache_spark.png){.absolute top=150 left=600 width="170" height="150"}
+![](imagenes/github_spark_01.png){.absolute top=100 left=600 width="350" height="50"}
+![](imagenes/github_spark_02.png){.absolute top=150 left=800 width="150" height="200"}
+
+. . .
+
+![](imagenes/logo_duckdb.png){.absolute top=450 left=100 width="200" height="150"}
+![](imagenes/github_duckdb_01.png){.absolute top=400 left=100 width="350" height="50"}
+![](imagenes/github_duckdb_02.png){.absolute top=450 left=300 width="150" height="200"}
+
+. . .
+
+![](imagenes/logo_datatable.png){.absolute top=450 left=600 width="200" height="200"}
+![](imagenes/github_datatable_01.png){.absolute top=400 left=600 width="350" height="50"}
+![](imagenes/github_datatable_02.png){.absolute top=450 left=800 width="150" height="200"}
+
+
+## Herramientas para datos grandes
 
 **Apache Arrow:**
 
-::: {.medium-par}
-- Architecture. <br><br>
-- Main characteristics. <br><br>
+<!-- ![](imagenes/logo_apache_arrow.png){.absolute top=60 left=200 width="70" height="50"} -->
+
+::: columns
+
+:::{.column width="50%" .incremental .small-par}
+
+- Su formato columnar *in-memory* y agnóstico al lenguaje permite representar datasets tabulares estructurados en memoria. <br><br>
+- Lectura y escritura en muchos formatos comunes de almacenamiento (csv, parquet, feather, etc.). <br><br>
+- Tiene implementaciones en muchos lenguajes (C++, Java, Python, R, etc.). <br><br>
+- Implementación en R permite ejecutar operaciones analíticas o queries sobre objectos *Table* and *Dataset* con librería *dplyr*.  
+
+:::
+
+:::{.column width="50%" .incremental .small-par}
+
+![](imagenes/arrow_columnar_format.png){width="90%"}
+
+:::
+
 :::
 
 
-## Herramientas para grandes volúmenes de datos 
+## Herramientas para datos grandes
 
-**Data Table:**
+**Apache Spark:**
 
-::: {.medium-par}
-- Architecture. <br><br>
-- Main characteristics. <br><br>
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="70" height="50"} -->
+
+::: columns
+
+:::{.column width="40%" .incremental .small-par}
+
+- Framework para el procesamiento distribuido de grandes datos. <br><br>
+- Procesamiento escala horizontalmente y se distribuye en múltiples nodos de un cluster. <br><br>
+- Procesos Spark: 
+  - Coordinados por el objeto *SparkContext* en nuestro programa main (driver).
+  - *SparkContext* se conecta a un *Cluster Manager* (Standalone, YARN, Kubernetes) que asigna los recursos del cluster.
+
+:::
+
+:::{.column width="60%" .incremental .small-par}
+
+![](imagenes/spark_02_1.png){width="100%"}
+
+![](imagenes/spark_01.png){width="70%"}
+
+:::
+
 :::
 
 
-## Herramientas para grandes volúmenes de datos 
+## Herramientas para datos grandes
+
+**Apache Spark:**
+
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="70" height="50"} -->
+
+::: columns
+
+:::{.column width="40%" .small-par}
+
+- Framework para el procesamiento distribuido de grandes datos. <br><br>
+- Procesamiento escala horizontalmente y se distribuye en múltiples nodos de un cluster. <br><br>
+- Procesos Spark: 
+  - Coordinados por el objeto *SparkContext* en nuestro programa main (driver).
+  - *SparkContext* se conecta a un *Cluster Manager* (Standalone, YARN, Kubernetes) que asigna los recursos del cluster.
+
+:::
+
+:::{.column width="60%" .incremental .small-par}
+
+![](imagenes/spark_02_2.png){width="100%"}
+
+![](imagenes/spark_01.png){width="70%"}
+
+:::
+
+:::
+
+
+## Herramientas para datos grandes
+
+**Apache Spark:**
+
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="70" height="50"} -->
+
+::: columns
+
+:::{.column width="40%" .small-par}
+
+- Framework para el procesamiento distribuido de grandes datos. <br><br>
+- Procesamiento escala horizontalmente y se distribuye en múltiples nodos de un cluster. <br><br>
+- Procesos Spark: 
+  - Coordinados por el objeto *SparkContext* en nuestro programa main (driver).
+  - *SparkContext* se conecta a un *Cluster Manager* (Standalone, YARN, Kubernetes) que asigna los recursos del cluster.
+
+:::
+
+:::{.column width="60%" .incremental .small-par}
+
+![](imagenes/spark_02_3.png){width="100%"}
+
+![](imagenes/spark_01.png){width="70%"}
+
+:::
+
+:::
+
+
+## Herramientas para datos grandes
+
+**Apache Spark:**
+
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="70" height="50"} -->
+
+::: columns
+
+:::{.column width="40%" .small-par}
+
+- Framework para el procesamiento distribuido de grandes datos. <br><br>
+- Procesamiento escala horizontalmente y se distribuye en múltiples nodos de un cluster. <br><br>
+- Procesos Spark: 
+  - Coordinados por el objeto *SparkContext* en nuestro programa main (driver).
+  - *SparkContext* se conecta a un *Cluster Manager* (Standalone, YARN, Kubernetes) que asigna los recursos del cluster.
+
+:::
+
+:::{.column width="60%" .incremental .small-par}
+
+![](imagenes/spark_02_4.png){width="100%"}
+
+![](imagenes/spark_01.png){width="70%"}
+
+:::
+
+:::
+
+
+## Herramientas para datos grandes 
+
+**Apache Spark:**
+
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="60" height="40"} -->
+
+
+::: {.medium-par}
+- Procesamiento versátil mediante varias APIs: en batches (Spark Core), queries SQL (Spark SQL), streaming (Spark Streaming), en graphs (GraphX) y machine learning (MLlib). <br><br>
+- APIs de alto nivel para varios lenguages: Scala, Java, Python y R. <br><br>
+- Integrable con varias fuentes de datos: Hadoop Distributed File System (HDFS), BBDD relacionales, data lakes, etc. <br><br>
+- Soporta varios formatos de archivo: CSV, Parquet, Avro, JSON, etc. <br><br>
+:::
+
+
+
+## Herramientas para datos grandes 
 
 **Duck DB:**
 
+<!-- ![](imagenes/logo_duckdb.png){.absolute top=65 left=140 width="80" height="40"} -->
+
+::: {.medium-par}
+- Sistema de manejo de base de datos analíticas (DBMS) diseñado para reportería y analítica. <br><br>
+- Almacena data en formato columnar, que está optimizado para queries analíticas. <br><br>
+- Usa un motor de ejecución de queries vectorizado, que procesa múltiple elementos de data (vectores) en una única instrucción. <br><br> 
+- Soporta sintaxis SQL estándard. <br><br>
+- ...
+:::
+
+
+## Herramientas para datos grandes 
+
+**Data Table:**
+
+<!-- ![](imagenes/logo_datatable.png){.absolute top=60 left=140 width="80" height="60"} -->
+
 ::: {.medium-par}
 - Architecture. <br><br>
 - Main characteristics. <br><br>
 :::
 
 
-## Caso práctico: Censo
+<!-- ## Caso práctico: Censo
 
 TODO:
 
@@ -194,97 +318,103 @@ TODO:
 - Describe different tests. <br><br>
 - Describe different processing stages. <br><br>
 - Describe different tools used. <br><br>
-:::
+::: -->
 
 
-## Caso práctico: Censo - Tests
+## Tests: Volumen de datos
 
 ::: {.medium-par}
 
-+----------------+
-| Test           |
-+================+
-| Sin aumentar   |
-|                |
-+----------------+
-| Aumentado +5M  |
-|                |
-+----------------+
-| Aumentado +10M |
-|                |
-+----------------+
-| Sin aumentar   |
-| Variables 2X   |
-+----------------+
-| Aumentado +5M  |
-| Variables 2X   |
-+----------------+
-| Aumentado 10M  |
-| Variables 2X   |
-+----------------+
+<br><br>
+
++----------------+---------------------------------------------+
+| Volumen        | Detalle                                     |
++================+=============================================+
+| Sin aumentar   | Dataset original                            |
+|                |                                             |
++----------------+---------------------------------------------+
+| Aumentado +5M  | Dataset con 5M de registros repetidos       |
+|                |                                             |
++----------------+---------------------------------------------+
+| Aumentado +10M | Dataset con 10M de registros repetidos      |
+|                |                                             |
++----------------+---------------------------------------------+
+| Sin aumentar   | Dataset con el doble de variables creadas   |
+| Variables 2X   |                                             |
++----------------+---------------------------------------------+
+| Aumentado +5M  | Dataset con 5M de registros repetidos       |
+| Variables 2X   | y con el doble de variables creadas         |
++----------------+---------------------------------------------+
+| Aumentado 10M  | Dataset con 10M de registros repetidos      |
+| Variables 2X   | y con el doble de variables creadas         |
++----------------+---------------------------------------------+
 
 ::: 
 
 
-## Caso práctico: Censo - Etapas en procesamiento
+## Tests: Etapa en procesamiento
 
 ::: {.medium-par}
 
-+----------------------+
-| Etapa                |
-+======================+
-| Cargar data          |
-|                      |
-+----------------------+
-| Homologar variables  |
-|                      |
-+----------------------+
-| Crear indices        |
-|                      |
-+----------------------+
-| Crear variables      |
-|                      |
-+----------------------+
-| Merguear variables   |
-|                      |
-+----------------------+
-| Left join            |
-|                      |
-+----------------------+
-| Exportar data        |
-|                      |
-+----------------------+
+<br><br>
+
++----------------------+--------------------------------------------------------------------------+
+| Etapa                | Detalle                                                                  |
++======================+==========================================================================+
+| Cargar data          | Lectura de dataset en R o Python                                         |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Homologar variables  | Transformación de algunas columnas en dataset                            |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Crear indices        | Creación de índices para columnas de agrupación (sólo para Data table)   |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Crear variables      | Creación de variables auxiliares de validación                           |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Merge variables      | Consolidación de variables de validación creadas                         |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Left join            | Unión de variables de validación a dataset                               |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
+| Exportar data        | Guardado de dataset transformado                                         |
+|                      |                                                                          |
++----------------------+--------------------------------------------------------------------------+
 
 ::: 
 
 
-## Caso práctico: Censo - Herramientas
+## Tests: Herramienta de procesamiento
 
 ::: {.medium-par}
 
-+----------------------+
-| Algoritmo            |
-+======================+
-| Apache Arrow (R)     |
-|                      |
-+----------------------+
-| Apache Arrow         |
-| + DuckDB (R)         |
-+----------------------+
-| Apache Arrow         |
-| + (Python)           |
-+----------------------+
-| Data Table (R)       |
-|                      |
-+----------------------+
-| Apache Spark (R)     |
-|                      |
-+----------------------+
+<br><br>
+
++----------------------+------------------------------------------------------------------+
+| Herramienta          | Detalle                                                          |
++======================+==================================================================+
+| Apache Arrow (R)     | Implementación de Arrow en R (operaciones usando *dplyr*)        |
+|                      |                                                                  |
++----------------------+------------------------------------------------------------------+
+| Apache Arrow         | Implementación de Arrow en R (operaciones usando *dplyr*).       | 
+| + DuckDB (R)         | Algunas operaciones ejecutadas usando DuckDB                     |
++----------------------+------------------------------------------------------------------+
+| Apache Arrow         | Implementación de Arrow en Python (PyArrow)                      |
+| + (Python)           |                                                                  |
++----------------------+------------------------------------------------------------------+
+| Data Table (R)       | Librería Data.table de R                                         |
+|                      |                                                                  |
++----------------------+------------------------------------------------------------------+
+| Apache Spark (R)     | Implementación de Spark en R (librería *sparklyr*)               |
+|                      |                                                                  |
++----------------------+------------------------------------------------------------------+
 
 ::: 
 
 
-## Algoritmos: Cargar data
+## Código procesamiento: Cargar data
 
 ::: {.panel-tabset}
 
@@ -365,35 +495,35 @@ select(all_of(columnas_2))
 :::
 
 
-## Algoritmos: Homologar variables
+## Código procesamiento: Homologar variables
 
 ::: {.medium-par}
 - Code example. <br><br>
 :::
 
 
-## Algoritmos: Crear índices
+## Código procesamiento: Crear índices
 
 ::: {.medium-par}
 - Code example. <br><br>
 :::
 
 
-## Algoritmos: Crear variables
+## Código procesamiento: Crear variables
 
 ::: {.medium-par}
 - Code example. <br><br>
 :::
 
 
-## Algoritmos: Merge variables
+## Código procesamiento: Merge variables
 
 ::: {.medium-par}
 - Code example. <br><br>
 :::
 
 
-## Algoritmos: Left join
+## Código procesamiento: Left join
 
 ::: {.panel-tabset}
 
@@ -444,7 +574,7 @@ persona <- persona %>%
 :::
 
 
-## Algoritmos: Exportar data
+## Código procesamiento: Exportar data
 
 ::: {.panel-tabset}
 
@@ -543,6 +673,17 @@ sparklyr::spark_disconnect(sc)
 
 
 
+## Conclusión
+
+::: {.medium-par}
+
+- Some observations on test results.
+
+- Best test ?
+
+:::
+
+
 ## Referencias
 
 TODO: Agregar referencias a documentación de herramientas / algoritmos
@@ -570,9 +711,9 @@ TODO: Agregar referencias a documentación de herramientas / algoritmos
 
 [**Grandes Volúmenes de Datos**]{.big-par .center-justified}
 
-[**Proyecto Estratégico Servicios Compartidos para la Producción Estadística**]{.big-par .center-justified}
+[**Proyecto Ciencia de Datos**]{.big-par .center-justified}
 
-[**Inducción - Septiembre 2023**]{.big-par .center-justified}
+[**Octubre 2023**]{.big-par .center-justified}
 
 []{.linea-superior} 
 []{.linea-inferior} 
