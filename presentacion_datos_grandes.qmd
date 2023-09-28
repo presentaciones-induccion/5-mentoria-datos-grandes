@@ -42,39 +42,19 @@ format:
 [**Octubre 2023**]{.big-par .center-justified}
 
 
+
 ## Tabla de contenidos 
 
-. . .
+<br>
 
-</br>
+::: {.incremental .big-par}
+- **Problema y Desafíos asociados** <br><br>
+- **Herramientas para datos grandes** <br><br>
+- **Test realizados** <br><br>
+- **Resultados tests** <br><br>
+- **Conclusión** <br><br>
+:::
 
-**Problema y Desafíos asociados**
-
-. . .
-
-</br>
-
-**Herramientas para datos grandes**
-
-. . .
-
-</br>
-
-**Test realizados**
-
-. . .
-
-</br>
-
-**Resultados tests**
-
-. . .
-
-</br>
-
-**Conclusión**
-
-. . .
 
 
 ## Problema y Desafíos
@@ -95,6 +75,39 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 - Explorar diferentes herramientas disponibles para el tratamiento de grandes volúmenes de datos. <br>
 - Evaluar tests consistentes en diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas. <br>
 :::
+
+
+
+## Problema y Desafíos
+
+![](imagenes/table_persona_input.png){width="100%"}
+
+![](imagenes/table_persona_variables_01.png){width="80%"}
+
+
+
+## Problema y Desafíos
+
+![](imagenes/table_persona_input.png){width="100%"}
+
+![](imagenes/table_persona_variables_02.png){width="80%"}
+
+
+
+## Problema y Desafíos
+
+![](imagenes/table_persona_input.png){width="100%"}
+
+![](imagenes/table_persona_variables_03.png){width="80%"}
+
+
+
+## Problema y Desafíos
+
+![](imagenes/table_persona_input.png){width="100%"}
+
+![](imagenes/table_persona_variables_04.png){width="80%"}
+
 
 
 ## Herramientas para datos grandes
@@ -266,18 +279,29 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 :::
 
 
-## Herramientas para datos grandes 
+## Herramientas para datos grandes
 
 **Apache Spark:**
 
-<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="60" height="40"} -->
+<!-- ![](imagenes/logo_apache_spark.png){.absolute top=60 left=200 width="70" height="50"} -->
 
+::: columns
 
-::: {.medium-par}
-- Procesamiento versátil mediante varias APIs: en batches (Spark Core), queries SQL (Spark SQL), streaming (Spark Streaming), en graphs (GraphX) y machine learning (MLlib). <br><br>
+:::{.column width="40%" .incremental .small-par}
+
+- Procesamiento versátil mediante varias librerías: en batches (Spark Core), queries SQL (Spark SQL), streaming (Spark Streaming), en graphs (GraphX) y machine learning (MLlib). <br><br>
 - APIs de alto nivel para varios lenguages: Scala, Java, Python y R. <br><br>
-- Integrable con varias fuentes de datos: Hadoop Distributed File System (HDFS), BBDD relacionales, data lakes, etc. <br><br>
+- Integrable con diversas fuentes de datos: Hadoop Distributed File System (HDFS), BBDD relacionales, data lakes, etc. <br><br>
 - Soporta varios formatos de archivo: CSV, Parquet, Avro, JSON, etc. <br><br>
+
+:::
+
+:::{.column width="60%" .incremental .small-par}
+
+![](imagenes/spark_ecosystem_03.png){width="100%"}
+
+:::
+
 :::
 
 
@@ -292,8 +316,8 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 - Sistema de manejo de base de datos analíticas (DBMS) diseñado para reportería y analítica. <br><br>
 - Almacena data en formato columnar, que está optimizado para queries analíticas. <br><br>
 - Usa un motor de ejecución de queries vectorizado, que procesa múltiple elementos de data (vectores) en una única instrucción. <br><br> 
-- Soporta sintaxis SQL estándard. <br><br>
-- ...
+- Soporta sintaxis SQL estándar. <br><br>
+- Escrito en C++, no tiene dependencias. 
 :::
 
 
@@ -318,6 +342,30 @@ TODO:
 - Describe different tests. <br><br>
 - Describe different processing stages. <br><br>
 - Describe different tools used. <br><br>
+::: -->
+
+
+<!-- ## Tests: Herramienta de procesamiento
+
+::: {.medium-par}
+
+<br><br>
+
+```{python}
+#| label: tbl-planet-measures
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Sin aumentar ","Dataset original"],
+         ["Aumentado +5M ","Dataset con 5M de registros repetidos"],
+         ["Aumentado +10M. Variables 2X","Dataset con 10M de registros repetidos"]
+        ]
+Markdown(tabulate(
+  table, 
+  headers=["Volumen","Detalle"]
+))
+```
+
 ::: -->
 
 
@@ -395,14 +443,14 @@ TODO:
 +----------------------+------------------------------------------------------------------+
 | Herramienta          | Detalle                                                          |
 +======================+==================================================================+
-| Apache Arrow (R)     | Implementación de Arrow en R (operaciones usando *dplyr*)        |
+| Apache Arrow (R)     | Implementación de Arrow en R (analítica usando *dplyr*)          |
 |                      |                                                                  |
 +----------------------+------------------------------------------------------------------+
-| Apache Arrow         | Implementación de Arrow en R (operaciones usando *dplyr*).       | 
+| Apache Arrow         | Implementación de Arrow en R (analítica usando *dplyr*).         |
 | + DuckDB (R)         | Algunas operaciones ejecutadas usando DuckDB                     |
 +----------------------+------------------------------------------------------------------+
-| Apache Arrow         | Implementación de Arrow en Python (PyArrow)                      |
-| + (Python)           |                                                                  |
+| Apache Arrow         | Implementación de Arrow en Python (PyArrow).                     |
+| + (Python)           | Analítica usando sintaxis de Arrow.                              |
 +----------------------+------------------------------------------------------------------+
 | Data Table (R)       | Librería Data.table de R                                         |
 |                      |                                                                  |
@@ -412,6 +460,7 @@ TODO:
 +----------------------+------------------------------------------------------------------+
 
 ::: 
+
 
 
 ## Código procesamiento: Cargar data
@@ -497,29 +546,278 @@ select(all_of(columnas_2))
 
 ## Código procesamiento: Homologar variables
 
-::: {.medium-par}
-- Code example. <br><br>
+::: {.panel-tabset}
+
+### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+persona <- persona %>%
+  mutate(
+    entrevista_id = as.integer64(paste0(REGION,PROVINCIA,COMUNA,DC,AREA,ZC_LOC,NVIV)),
+    rst_hogares__id = as.integer64(NHOGAR),
+    parentesco = as.integer64(P07),
+    sexo = as.integer64(P08),
+    sexo_validado = as.integer64(P08),
+    edad = as.integer64(P09),
+    edad_validada = as.integer64(P09),
+    ...
+  ) %>%
+  compute()
+```
+
+### [Apache Arrow (Python)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+# this is valid when persona is pyarrow.lib.Table
+col_names = persona.column_names
+
+col_names_new = []
+for i, c in enumerate(col_names):
+    if c == "NHOGAR":
+        c_new = "rst_hogares__id"
+    elif c == "P07":
+        c_new = "parentesco"
+    elif c == "P08":
+        c_new = "sexo"
+    elif c == "P09":
+        c_new = "edad"
+    ...
+    else:
+        c_new = c
+    col_names_new.append(c_new)
+persona = persona.rename_columns(col_names_new)
+
+persona = persona.append_column("edad_validada", persona["edad"])
+persona = persona.append_column("sexo_validado", persona["sexo"])
+
+entrevista_id = pc.binary_join_element_wise(
+    pc.cast(persona['REGION'], pa.string()),
+    pc.cast(persona['COMUNA'], pa.string()),
+    pc.cast(persona['DC'], pa.string()),
+    pc.cast(persona['AREA'], pa.string()),
+    pc.cast(persona['ZC_LOC'], pa.string()),
+    pc.cast(persona['NVIV'], pa.string()),    
+    ""
+)
+persona = persona.append_column("entrevista_id", entrevista_id)
+```
+
+### [Data Table (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+columnas_integer <- c(
+  "NHOGAR",
+  "P07",
+  "P08",
+  "P09",
+  ...
+)
+columnas_new <- c(
+  "rst_hogares__id",
+  "parentesco",
+  "sexo",
+  "edad",
+  ...
+)
+setnames(persona, columnas_integer, columnas_new, skip_absent=TRUE) # skips columns which are not par of df
+
+# new columns 
+persona[, ':='(
+  entrevista_id = as.double(paste0(REGION,PROVINCIA,COMUNA,DC,AREA,ZC_LOC,NVIV)),
+  sexo_validado = sexo,
+  edad_validada = edad
+)]
+```
+
+### [Apache Spark (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+persona <- persona %>%
+  mutate(
+    entrevista_id = as.double(paste0(REGION,PROVINCIA,COMUNA,DC,AREA,ZC_LOC,NVIV)),
+    sexo_validado = sexo,
+    edad_validada = edad
+  )
+```
+
 :::
+
 
 
 ## Código procesamiento: Crear índices
 
-::: {.medium-par}
-- Code example. <br><br>
+::: {.panel-tabset}
+
+### [Data Table (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+setindex(persona, entrevista_id, rst_hogares__id, parentesco, sexo_validado, edad_validada)
+```
+
 :::
+
 
 
 ## Código procesamiento: Crear variables
 
-::: {.medium-par}
-- Code example. <br><br>
+::: {.panel-tabset}
+
+### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+persona <- persona %>% 
+  mutate(edad_edu_curso = edad_validada - edu_curso) %>%
+  compute()
+
+# base persona nivel hogar
+pers_niv_hog <- persona %>% 
+  group_by(entrevista_id, rst_hogares__id) %>%
+  summarize(cant_per_hog = n()) %>%
+  compute()
+
+# edad del jefe del hogar
+edad_jefe_hogar <- persona %>%
+  filter(parentesco==1) %>%
+  group_by(entrevista_id,rst_hogares__id) %>%
+  summarize(edad_jh = max(edad_validada),
+            sexo_jh = max(sexo_validado)) %>%
+  compute()
+```
+
+### [Apache Arrow (Python)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+edad_edu_curso = pc.subtract(persona["edad_validada"],persona["edu_curso"])
+persona = persona.append_column("edad_edu_curso", edad_edu_curso)
+del edad_edu_curso
+
+# base persona nivel hogar
+pers_niv_hog = persona\
+    .group_by(["entrevista_id","rst_hogares__id"])\
+    .aggregate([("entrevista_id", "count")])\
+    .rename_columns(["entrevista_id","rst_hogares__id","cant_per_hog"])
+
+# edad del jefe del hogar
+edad_jefe_hogar = persona\
+    .filter(pc.field("parentesco") == 1)\
+    .group_by(["entrevista_id","rst_hogares__id"])\
+    .aggregate([("edad_validada", "max"), ("sexo_validado", "max")])\
+    .rename_columns(["entrevista_id","rst_hogares__id","edad_jh","sexo_jh"])
+```
+
+### [Data Table (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+persona[, edad_edu_curso := edad_validada - edu_curso]
+
+# base persona nivel hogar
+pers_niv_hog <- persona[
+  ,
+  .(cant_per_hog = .N),
+  by = c("entrevista_id","rst_hogares__id")
+]
+
+# edad del jefe del hogar
+edad_jefe_hogar <- persona[
+  parentesco==1,
+  .(edad_jh = max(edad_validada), sexo_jh = max(sexo_validado)),
+  by = c("entrevista_id","rst_hogares__id")
+]
+```
+
+### [Apache Spark (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+persona <- persona %>%
+  mutate(edad_edu_curso = edad_validada - edu_curso)
+
+# base persona nivel hogar
+pers_niv_hog <- persona %>%
+  group_by(entrevista_id, rst_hogares__id) %>%
+  summarize(cant_per_hog = n(), .groups = 'drop')
+
+# edad del jefe del hogar
+edad_jefe_hogar <- persona %>%
+  filter(parentesco==1) %>%
+  group_by(entrevista_id,rst_hogares__id) %>%
+  summarize(edad_jh = max(edad_validada),
+            sexo_jh = max(sexo_validado), .groups = 'drop')
+```
+
 :::
+
 
 
 ## Código procesamiento: Merge variables
 
-::: {.medium-par}
-- Code example. <br><br>
+::: {.panel-tabset}
+
+### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+# union de edades construidas a nivel hogar
+edad_hhpmss_jefe_hogar <- pers_niv_hog %>%
+  left_join(edad_jefe_hogar, by = c("entrevista_id","rst_hogares__id")) %>%
+  compute()
+
+edad_hhpmss_jefe_hogar <- edad_hhpmss_jefe_hogar %>%
+  left_join(edad_hno_min_max_jefe_hogar, by = c("entrevista_id","rst_hogares__id")) %>%
+  compute()
+```
+
+### [Apache Arrow (Python)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+ks = ["entrevista_id","rst_hogares__id"]
+
+edad_hhpmss_jefe_hogar = pers_niv_hog\
+    .join(edad_jefe_hogar, keys=ks)\
+    .join(edad_hno_min_max_jefe_hogar, keys=ks)\
+    ...
+```
+
+### [Data Table (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+edad_hhpmss_jefe_hogar <- merge(pers_niv_hog, edad_jefe_hogar, by=c("entrevista_id","rst_hogares__id"), all.x=TRUE, all.y=FALSE)
+edad_hhpmss_jefe_hogar <- merge(edad_hhpmss_jefe_hogar, edad_hno_min_max_jefe_hogar, by=c("entrevista_id","rst_hogares__id"), all.x=TRUE, all.y=FALSE)
+```
+
+### [Apache Spark (R)]{.medium-par}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+edad_hhpmss_jefe_hogar <- pers_niv_hog %>%
+  left_join(edad_jefe_hogar, by = c("entrevista_id","rst_hogares__id")) %>%
+  left_join(edad_hno_min_max_jefe_hogar, by = c("entrevista_id","rst_hogares__id")) %>%
+  ...
+```
+
 :::
 
 
