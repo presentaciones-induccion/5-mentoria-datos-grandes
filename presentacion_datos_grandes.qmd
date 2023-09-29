@@ -51,7 +51,7 @@ format:
 - **Problema y Desafíos asociados** <br><br>
 - **Herramientas para datos grandes** <br><br>
 - **Test realizados** <br><br>
-- **Resultados tests** <br><br>
+- **Resultados** <br><br>
 - **Conclusión** <br><br>
 :::
 
@@ -59,54 +59,94 @@ format:
 
 ## Problema y Desafíos
 
-</br>
+<!-- </br> -->
+
+<p class="box-empty"><span > </span></p>
 
 . . .
 
-Como parte del Censo 2024, es necesaria la creación de variables auxiliares para la validación de los datos.
+El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.
 
 . . .
 
-Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo que conlleva varios desafíos:
+![](imagenes/table_persona_input.png){width="80%"}
+
+. . .
+
+<!-- <p class="box-empty-2"><span > </span></p> -->
+
+![](imagenes/table_persona_variables_01.png){width="70%"}
+
+
+
+## Problema y Desafíos
+
+<p class="box-empty"><span > </span></p>
+
+El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.
+
+![](imagenes/table_persona_input.png){width="80%"}
+
+
+![](imagenes/table_persona_variables_02.png){width="70%"}
+
+
+
+## Problema y Desafíos
+
+<p class="box-empty"><span > </span></p>
+
+El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.
+
+![](imagenes/table_persona_input.png){width="80%"}
+
+
+![](imagenes/table_persona_variables_03.png){width="70%"}
+
+
+
+## Problema y Desafíos
+
+<p class="box-empty"><span > </span></p>
+
+El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.
+
+![](imagenes/table_persona_input.png){width="80%"}
+
+
+![](imagenes/table_persona_variables_04.png){width="60%"}
+
+
+
+## Problema y Desafíos
+
+<p class="box-empty"><span > </span></p>
+
+El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos. <br><br>
+
+. . .
+
+Estos datos requieren ser revisados, mediante la creación de variables auxiliares que se utilizan para validar la información censada. <br><br>
+
+. . .
+
+Este proceso debe ser eficiente, confiable y rápido. Lo que conlleva varios desafíos:
 
 ::: {.incremental .medium-par}
 - Cargar, procesar y escribir grandes volúmenes de datos (20M+ de registros) en el menor tiempo posible. <br>
-- Procesar datos de manera confiable... <br>
-- Explorar diferentes herramientas disponibles para el tratamiento de grandes volúmenes de datos. <br>
-- Evaluar tests consistentes en diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas. <br>
+- Procesar datos de manera confiable...**TODO** <br>
+- Encontrar la herramienta apropiada para el tratamiento de este volumen de datos. <br>
+- Evaluar diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas...**TODO** <br>
 :::
 
 
 
-## Problema y Desafíos
+<!-- ## Problema y Desafíos
 
 ![](imagenes/table_persona_input.png){width="100%"}
 
 ![](imagenes/table_persona_variables_01.png){width="80%"}
-
-
-
-## Problema y Desafíos
-
-![](imagenes/table_persona_input.png){width="100%"}
-
-![](imagenes/table_persona_variables_02.png){width="80%"}
-
-
-
-## Problema y Desafíos
-
-![](imagenes/table_persona_input.png){width="100%"}
-
-![](imagenes/table_persona_variables_03.png){width="80%"}
-
-
-
-## Problema y Desafíos
-
-![](imagenes/table_persona_input.png){width="100%"}
-
-![](imagenes/table_persona_variables_04.png){width="80%"}
+ -->
 
 
 
@@ -154,9 +194,9 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 
 :::
 
-:::{.column width="50%" .incremental .small-par}
+:::{.column width="50%" .small-par}
 
-![](imagenes/arrow_columnar_format.png){width="90%"}
+![](imagenes/arrow_columnar_format.png){width="100%"}
 
 :::
 
@@ -312,7 +352,7 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 
 <!-- ![](imagenes/logo_duckdb.png){.absolute top=65 left=140 width="80" height="40"} -->
 
-::: {.medium-par}
+::: {.incremental .medium-par}
 - Sistema de manejo de base de datos analíticas (DBMS) diseñado para reportería y analítica. <br><br>
 - Almacena data en formato columnar, que está optimizado para queries analíticas. <br><br>
 - Usa un motor de ejecución de queries vectorizado, que procesa múltiple elementos de data (vectores) en una única instrucción. <br><br> 
@@ -323,13 +363,15 @@ Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo
 
 ## Herramientas para datos grandes 
 
-**Data Table:**
+**data.table:**
 
 <!-- ![](imagenes/logo_datatable.png){.absolute top=60 left=140 width="80" height="60"} -->
 
-::: {.medium-par}
-- Architecture. <br><br>
-- Main characteristics. <br><br>
+::: {.incremental .medium-par}
+- Paquete de R que ofrece una versión de alto rendimiento del *data.frame* (estructure estándar para almacenar data en R). <br><br>
+- Internamente muchas operaciones comunes son paralelizadas para usar múltiples hilos de CPU. <br><br>
+- No tiene otras dependencias que R base. <br><br>
+- Ampliamente usado en la comunidad R y directamente usado por cientos de paquetes CRAN. <br><br>
 :::
 
 
@@ -369,11 +411,72 @@ Markdown(tabulate(
 ::: -->
 
 
-## Tests: Volumen de datos
+
+## Tests: Herramienta de procesamiento
+
+<!-- <br> -->
+
+. . .
+
+<p class="box-empty"><span > </span></p>
+
+Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas, en diferentes etapas. 
+
+
+
+## Tests: Herramienta de procesamiento
+
+<!-- <br> -->
+
+<p class="box-empty"><span > </span></p>
+
+[Evaluamos diferentes escenarios de procesamiento: variando la]{.lightgray} **herramienta usada** [, el volumen de los datos y la cantidad de variables auxiliares creadas, en diferentes etapas.]{.lightgray} 
+
+. . .
 
 ::: {.medium-par}
 
-<br><br>
+<!-- <br> -->
+
+<p class="box-empty"><span > </span></p>
+<!-- [""]{.box} -->
+
++----------------------+------------------------------------------------------------------+
+| Herramienta          | Detalle                                                          |
++======================+==================================================================+
+| Apache Arrow (R)     | Implementación de Arrow en R (analítica usando *dplyr*)          |
+|                      |                                                                  |
++----------------------+------------------------------------------------------------------+
+| Apache Arrow         | Implementación de Arrow en R (analítica usando *dplyr*). <br>    |
+| + DuckDB (R)         | Algunas operaciones ejecutadas usando DuckDB                     |
++----------------------+------------------------------------------------------------------+
+| Apache Arrow         | Implementación de Arrow en Python (PyArrow). <br>                |
+| + (Python)           | Analítica usando sintaxis de Arrow.                              |
++----------------------+------------------------------------------------------------------+
+| data.table (R)       | Librería data.table de R                                         |
+|                      |                                                                  |
++----------------------+------------------------------------------------------------------+
+| Apache Spark (R)     | Implementación de Spark en R (librería *sparklyr*). <br>         |
+|                      | Usando 1 cluster (máquina local)                                 |
++----------------------+------------------------------------------------------------------+
+
+::: 
+
+
+
+## Tests: Volumen de datos
+
+<!-- . . . -->
+
+<p class="box-empty"><span > </span></p>
+
+[Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el]{.lightgray} **volumen de los datos y la cantidad de variables auxiliares creadas** [en diferentes etapas]{.lightgray}. 
+
+. . .
+
+::: {.medium-par}
+
+<p class="box-empty"><span > </span></p>
 
 +----------------+---------------------------------------------+
 | Volumen        | Detalle                                     |
@@ -402,9 +505,17 @@ Markdown(tabulate(
 
 ## Tests: Etapa en procesamiento
 
+<!-- . . . -->
+
+<p class="box-empty"><span > </span></p>
+
+[Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas, en]{.lightgray} **diferentes etapas.** 
+
+. . .
+
 ::: {.medium-par}
 
-<br><br>
+<p class="box-empty"><span > </span></p>
 
 +----------------------+--------------------------------------------------------------------------+
 | Etapa                | Detalle                                                                  |
@@ -431,35 +542,7 @@ Markdown(tabulate(
 |                      |                                                                          |
 +----------------------+--------------------------------------------------------------------------+
 
-::: 
-
-
-## Tests: Herramienta de procesamiento
-
-::: {.medium-par}
-
-<br><br>
-
-+----------------------+------------------------------------------------------------------+
-| Herramienta          | Detalle                                                          |
-+======================+==================================================================+
-| Apache Arrow (R)     | Implementación de Arrow en R (analítica usando *dplyr*)          |
-|                      |                                                                  |
-+----------------------+------------------------------------------------------------------+
-| Apache Arrow         | Implementación de Arrow en R (analítica usando *dplyr*).         |
-| + DuckDB (R)         | Algunas operaciones ejecutadas usando DuckDB                     |
-+----------------------+------------------------------------------------------------------+
-| Apache Arrow         | Implementación de Arrow en Python (PyArrow).                     |
-| + (Python)           | Analítica usando sintaxis de Arrow.                              |
-+----------------------+------------------------------------------------------------------+
-| Data Table (R)       | Librería Data.table de R                                         |
-|                      |                                                                  |
-+----------------------+------------------------------------------------------------------+
-| Apache Spark (R)     | Implementación de Spark en R (librería *sparklyr*)               |
-|                      |                                                                  |
-+----------------------+------------------------------------------------------------------+
-
-::: 
+:::
 
 
 
@@ -467,7 +550,7 @@ Markdown(tabulate(
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par}
+### [Apache Arrow (R) [+DuckDB]]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -487,7 +570,7 @@ arrow::write_dataset(persona, path_dataset, format=format_dataset, partitioning=
 persona <- arrow::open_dataset(path_dataset, format=format_dataset, partitioning=cols_partition)
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -509,7 +592,7 @@ ds.write_dataset(
 )
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -521,7 +604,7 @@ persona <- data.table::fread(
 )
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -548,7 +631,7 @@ select(all_of(columnas_2))
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+### [Apache Arrow (R) [+DuckDB]]{.small-par} 
 
 ```{r}
 #| echo: TRUE
@@ -567,7 +650,7 @@ persona <- persona %>%
   compute()
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -606,7 +689,7 @@ entrevista_id = pc.binary_join_element_wise(
 persona = persona.append_column("entrevista_id", entrevista_id)
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -635,7 +718,7 @@ persona[, ':='(
 )]
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -656,7 +739,7 @@ persona <- persona %>%
 
 ::: {.panel-tabset}
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -672,7 +755,7 @@ setindex(persona, entrevista_id, rst_hogares__id, parentesco, sexo_validado, eda
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+### [Apache Arrow (R) [+DuckDB]]{.small-par} 
 
 ```{r}
 #| echo: TRUE
@@ -696,7 +779,7 @@ edad_jefe_hogar <- persona %>%
   compute()
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -719,7 +802,7 @@ edad_jefe_hogar = persona\
     .rename_columns(["entrevista_id","rst_hogares__id","edad_jh","sexo_jh"])
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -741,7 +824,7 @@ edad_jefe_hogar <- persona[
 ]
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -770,7 +853,7 @@ edad_jefe_hogar <- persona %>%
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+### [Apache Arrow (R) [+DuckDB]]{.small-par} 
 
 ```{r}
 #| echo: TRUE
@@ -785,7 +868,7 @@ edad_hhpmss_jefe_hogar <- edad_hhpmss_jefe_hogar %>%
   compute()
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -798,7 +881,7 @@ edad_hhpmss_jefe_hogar = pers_niv_hog\
     ...
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -807,7 +890,7 @@ edad_hhpmss_jefe_hogar <- merge(pers_niv_hog, edad_jefe_hogar, by=c("entrevista_
 edad_hhpmss_jefe_hogar <- merge(edad_hhpmss_jefe_hogar, edad_hno_min_max_jefe_hogar, by=c("entrevista_id","rst_hogares__id"), all.x=TRUE, all.y=FALSE)
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -825,7 +908,7 @@ edad_hhpmss_jefe_hogar <- pers_niv_hog %>%
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par} 
+### [Apache Arrow (R) [+DuckDB]]{.small-par} 
 
 ```{r}
 #| echo: TRUE
@@ -835,7 +918,7 @@ persona <- persona %>%
   compute()
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -846,7 +929,7 @@ persona = persona\
     .join(edad_hhpmss_jefe_hogar, keys=ks)
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -860,7 +943,7 @@ persona <- merge(
 )
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -876,7 +959,7 @@ persona <- persona %>%
 
 ::: {.panel-tabset}
 
-### [Apache Arrow (R) [+DuckDB]]{.medium-par}
+### [Apache Arrow (R) [+DuckDB]]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -887,7 +970,7 @@ path_dataset <- "test_arrow_dataset_out"
 arrow::write_dataset(persona, path_dataset, format=format_dataset, partitioning=cols_partition)
 ```
 
-### [Apache Arrow (Python)]{.medium-par}
+### [Apache Arrow (Python)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -905,7 +988,7 @@ ds.write_dataset(
 )
 ```
 
-### [Data Table (R)]{.medium-par}
+### [Data Table (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -915,7 +998,7 @@ filename_out <- "integrada_persona____data_no_aumentado.feather"
 feather::write_feather(persona, filename_out)
 ```
 
-### [Apache Spark (R)]{.medium-par}
+### [Apache Spark (R)]{.small-par}
 
 ```{r}
 #| echo: TRUE
@@ -938,6 +1021,40 @@ sparklyr::spark_disconnect(sc)
 ```
 
 :::
+
+
+
+<!-- ## Resultados
+
+::: {.panel-tabset}
+
+### [1]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_no_aum.png" width="100%"/>  
+
+### [2]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_05M.png" width="100%"/>  
+
+### [3]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M.png" width="100%"/>  
+
+
+### [4]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_no_aum_var_aum1X.png" width="100%"/>  
+
+### [5]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_05M_var_aum1X.png" width="100%"/>  
+
+
+### [6]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M_var_aum1X.png" width="100%"/>  
+
+::: -->
 
 
 ## Resultados: Data sin aumentar
@@ -970,21 +1087,32 @@ sparklyr::spark_disconnect(sc)
 <img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M_var_aum1X.png" width="100%"/>  
 
 
+## Resultados: Todos los tests
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_test_1.png" width="110%"/>  
+
+
 
 ## Conclusión
 
-::: {.medium-par}
+::: {.incremental .medium-par}
 
-- Some observations on test results.
+- La implementación de *Spark* usada no escala eficientemente ni al aumentar los datos ni al incrementar el número de variables.
+  - Los efectos de usar *Spark* debieran ser más notorios al usar un cluster más poderoso: varias máquinas con más RAM, comparado con 1 cluster (máquina local) usado para este test.
 
-- Best test ?
+- El procesamiento con *Arrow + DuckDB* es más rápido que con *data.table* para los tests menos exigentes, lo que se invierte para los test más exigentes (con mayor aumento de datos o de variables calculadas).
+  - Esto demuestra que *DuckDB* no escala eficientemente, e incluso es más lento que *Spark*, para las queries más exigentes.
+
+- Los procesamientos más rápidos se obtienen al usar las implementaciones de *Arrow* en R y Python.
+  - Siendo más rápida la de R por una diferencia que se incrementa para los tests más exigentes (con más datos y más variables calculadas).
+  - Esto puede deberse a que Arrow en R usa *dplyr*, mientras que en Python se usó sintaxis nativa de *Arrow*...**TODO**
 
 :::
 
 
 ## Referencias
 
-TODO: Agregar referencias a documentación de herramientas / algoritmos
+**TODO**: Agregar referencias a documentación de herramientas / algoritmos
 
 ::: {.medium-par}
 
@@ -1007,7 +1135,7 @@ TODO: Agregar referencias a documentación de herramientas / algoritmos
 
 <img src="imagenes/logo_portada2.png" width="20%"/>  
 
-[**Grandes Volúmenes de Datos**]{.big-par .center-justified}
+[**Mentoría Grandes Volúmenes de Datos**]{.big-par .center-justified}
 
 [**Proyecto Ciencia de Datos**]{.big-par .center-justified}
 
@@ -1015,27 +1143,3 @@ TODO: Agregar referencias a documentación de herramientas / algoritmos
 
 []{.linea-superior} 
 []{.linea-inferior} 
-
-<!---
- ## Polar Axis  
-
-For a demonstration of a line plot on a polar axis, see @fig-polar.
-
-```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis, not a bear"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 4 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-``` 
---->

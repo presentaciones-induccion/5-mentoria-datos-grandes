@@ -420,48 +420,82 @@
 <li class="fragment"><strong>Problema y Desafíos asociados</strong> <br><br></li>
 <li class="fragment"><strong>Herramientas para datos grandes</strong> <br><br></li>
 <li class="fragment"><strong>Test realizados</strong> <br><br></li>
-<li class="fragment"><strong>Resultados tests</strong> <br><br></li>
+<li class="fragment"><strong>Resultados</strong> <br><br></li>
 <li class="fragment"><strong>Conclusión</strong> <br><br></li>
 </ul>
 </div>
 </section>
 <section id="problema-y-desafíos" class="slide level2">
 <h2>Problema y Desafíos</h2>
-<p><br></p>
+<!-- </br> -->
+<p class="box-empty">
+<span> </span>
+</p>
 <div class="fragment">
-<p>Como parte del Censo 2024, es necesaria la creación de variables auxiliares para la validación de los datos.</p>
+<p>El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.</p>
 </div>
 <div class="fragment">
-<p>Este proceso envuelve un gran volumen de datos, debe ser eficiente y rápido. Lo que conlleva varios desafíos:</p>
-<div class="medium-par">
-<ul>
-<li class="fragment">Cargar, procesar y escribir grandes volúmenes de datos (20M+ de registros) en el menor tiempo posible. <br></li>
-<li class="fragment">Procesar datos de manera confiable… <br></li>
-<li class="fragment">Explorar diferentes herramientas disponibles para el tratamiento de grandes volúmenes de datos. <br></li>
-<li class="fragment">Evaluar tests consistentes en diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas. <br></li>
-</ul>
+<p><img data-src="imagenes/table_persona_input.png" style="width:80.0%"></p>
 </div>
+<div class="fragment">
+<!-- <p class="box-empty-2"><span > </span></p> -->
+<p><img data-src="imagenes/table_persona_variables_01.png" style="width:70.0%"></p>
 </div>
 </section>
 <section id="problema-y-desafíos-1" class="slide level2">
 <h2>Problema y Desafíos</h2>
-<p><img data-src="imagenes/table_persona_input.png" style="width:100.0%"></p>
-<p><img data-src="imagenes/table_persona_variables_01.png" style="width:80.0%"></p>
+<p class="box-empty">
+<span> </span>
+</p>
+<p>El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.</p>
+<p><img data-src="imagenes/table_persona_input.png" style="width:80.0%"></p>
+<p><img data-src="imagenes/table_persona_variables_02.png" style="width:70.0%"></p>
 </section>
 <section id="problema-y-desafíos-2" class="slide level2">
 <h2>Problema y Desafíos</h2>
-<p><img data-src="imagenes/table_persona_input.png" style="width:100.0%"></p>
-<p><img data-src="imagenes/table_persona_variables_02.png" style="width:80.0%"></p>
+<p class="box-empty">
+<span> </span>
+</p>
+<p>El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.</p>
+<p><img data-src="imagenes/table_persona_input.png" style="width:80.0%"></p>
+<p><img data-src="imagenes/table_persona_variables_03.png" style="width:70.0%"></p>
 </section>
 <section id="problema-y-desafíos-3" class="slide level2">
 <h2>Problema y Desafíos</h2>
-<p><img data-src="imagenes/table_persona_input.png" style="width:100.0%"></p>
-<p><img data-src="imagenes/table_persona_variables_03.png" style="width:80.0%"></p>
+<p class="box-empty">
+<span> </span>
+</p>
+<p>El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos.</p>
+<p><img data-src="imagenes/table_persona_input.png" style="width:80.0%"></p>
+<p><img data-src="imagenes/table_persona_variables_04.png" style="width:60.0%"></p>
 </section>
 <section id="problema-y-desafíos-4" class="slide level2">
 <h2>Problema y Desafíos</h2>
-<p><img data-src="imagenes/table_persona_input.png" style="width:100.0%"></p>
-<p><img data-src="imagenes/table_persona_variables_04.png" style="width:80.0%"></p>
+<p class="box-empty">
+<span> </span>
+</p>
+<p>El desarrollo del Censo 2024 involucra la generación de un gran volumen de datos. <br><br></p>
+<div class="fragment">
+<p>Estos datos requieren ser revisados, mediante la creación de variables auxiliares que se utilizan para validar la información censada. <br><br></p>
+</div>
+<div class="fragment">
+<p>Este proceso debe ser eficiente, confiable y rápido. Lo que conlleva varios desafíos:</p>
+<div class="medium-par">
+<ul>
+<li class="fragment">Cargar, procesar y escribir grandes volúmenes de datos (20M+ de registros) en el menor tiempo posible. <br></li>
+<li class="fragment">Procesar datos de manera confiable…<strong>TODO</strong> <br></li>
+<li class="fragment">Encontrar la herramienta apropiada para el tratamiento de este volumen de datos. <br></li>
+<li class="fragment">Evaluar diferentes escenarios de procesamiento, variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas…<strong>TODO</strong> <br></li>
+</ul>
+</div>
+
+<!-- ## Problema y Desafíos
+
+![](imagenes/table_persona_input.png){width="100%"}
+
+![](imagenes/table_persona_variables_01.png){width="80%"}
+ -->
+</div>
 </section>
 <section id="herramientas-para-datos-grandes" class="slide level2">
 <h2>Herramientas para datos grandes</h2>
@@ -491,7 +525,7 @@
 <li class="fragment">Implementación en R permite ejecutar operaciones analíticas o queries sobre objectos <em>Table</em> and <em>Dataset</em> con librería <em>dplyr</em>.</li>
 </ul>
 </div><div class="column small-par" style="width:50%;">
-<p><img data-src="imagenes/arrow_columnar_format.png" style="width:90.0%"></p>
+<p><img data-src="imagenes/arrow_columnar_format.png" style="width:100.0%"></p>
 </div>
 </div>
 </section>
@@ -602,23 +636,25 @@
 <!-- ![](imagenes/logo_duckdb.png){.absolute top=65 left=140 width="80" height="40"} -->
 <div class="medium-par">
 <ul>
-<li>Sistema de manejo de base de datos analíticas (DBMS) diseñado para reportería y analítica. <br><br></li>
-<li>Almacena data en formato columnar, que está optimizado para queries analíticas. <br><br></li>
-<li>Usa un motor de ejecución de queries vectorizado, que procesa múltiple elementos de data (vectores) en una única instrucción. <br><br></li>
-<li>Soporta sintaxis SQL estándar. <br><br></li>
-<li>Escrito en C++, no tiene dependencias.</li>
+<li class="fragment">Sistema de manejo de base de datos analíticas (DBMS) diseñado para reportería y analítica. <br><br></li>
+<li class="fragment">Almacena data en formato columnar, que está optimizado para queries analíticas. <br><br></li>
+<li class="fragment">Usa un motor de ejecución de queries vectorizado, que procesa múltiple elementos de data (vectores) en una única instrucción. <br><br></li>
+<li class="fragment">Soporta sintaxis SQL estándar. <br><br></li>
+<li class="fragment">Escrito en C++, no tiene dependencias.</li>
 </ul>
 </div>
 </section>
 <section id="herramientas-para-datos-grandes-8" class="slide level2">
 <h2>Herramientas para datos grandes</h2>
-<p><strong>Data Table:</strong></p>
+<p><strong>data.table:</strong></p>
 
 <!-- ![](imagenes/logo_datatable.png){.absolute top=60 left=140 width="80" height="60"} -->
 <div class="medium-par">
 <ul>
-<li>Architecture. <br><br></li>
-<li>Main characteristics. <br><br></li>
+<li class="fragment">Paquete de R que ofrece una versión de alto rendimiento del <em>data.frame</em> (estructure estándar para almacenar data en R). <br><br></li>
+<li class="fragment">Internamente muchas operaciones comunes son paralelizadas para usar múltiples hilos de CPU. <br><br></li>
+<li class="fragment">No tiene otras dependencias que R base. <br><br></li>
+<li class="fragment">Ampliamente usado en la comunidad R y directamente usado por cientos de paquetes CRAN. <br><br></li>
 </ul>
 </div>
 <!-- ## Caso práctico: Censo
@@ -651,10 +687,79 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 
 ::: -->
 </section>
+<section id="tests-herramienta-de-procesamiento" class="slide level2">
+<h2>Tests: Herramienta de procesamiento</h2>
+<!-- <br> -->
+<div class="fragment">
+<p class="box-empty">
+<span> </span>
+</p>
+<p>Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas, en diferentes etapas.</p>
+</div>
+</section>
+<section id="tests-herramienta-de-procesamiento-1" class="slide level2">
+<h2>Tests: Herramienta de procesamiento</h2>
+<!-- <br> -->
+<p class="box-empty">
+<span> </span>
+</p>
+<p><span class="lightgray">Evaluamos diferentes escenarios de procesamiento: variando la</span> <strong>herramienta usada</strong> <span class="lightgray">, el volumen de los datos y la cantidad de variables auxiliares creadas, en diferentes etapas.</span></p>
+<div class="fragment">
+<div class="medium-par">
+<!-- <br> -->
+<p class="box-empty">
+<span> </span>
+</p>
+<!-- [""]{.box} -->
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Herramienta</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Apache Arrow (R)</td>
+<td>Implementación de Arrow en R (analítica usando <em>dplyr</em>)</td>
+</tr>
+<tr class="even">
+<td>Apache Arrow + DuckDB (R)</td>
+<td>Implementación de Arrow en R (analítica usando <em>dplyr</em>). <br> Algunas operaciones ejecutadas usando DuckDB</td>
+</tr>
+<tr class="odd">
+<td>Apache Arrow + (Python)</td>
+<td>Implementación de Arrow en Python (PyArrow). <br> Analítica usando sintaxis de Arrow.</td>
+</tr>
+<tr class="even">
+<td>data.table (R)</td>
+<td>Librería data.table de R</td>
+</tr>
+<tr class="odd">
+<td>Apache Spark (R)</td>
+<td>Implementación de Spark en R (librería <em>sparklyr</em>). <br> Usando 1 cluster (máquina local)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 <section id="tests-volumen-de-datos" class="slide level2">
 <h2>Tests: Volumen de datos</h2>
+<!-- . . . -->
+<p class="box-empty">
+<span> </span>
+</p>
+<p><span class="lightgray">Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el</span> <strong>volumen de los datos y la cantidad de variables auxiliares creadas</strong> <span class="lightgray">en diferentes etapas</span>.</p>
+<div class="fragment">
 <div class="medium-par">
-<p><br><br></p>
+<p class="box-empty">
+<span> </span>
+</p>
 <table style="width:88%;">
 <colgroup>
 <col style="width: 23%">
@@ -694,11 +799,20 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 </tbody>
 </table>
 </div>
+</div>
 </section>
 <section id="tests-etapa-en-procesamiento" class="slide level2">
 <h2>Tests: Etapa en procesamiento</h2>
+<!-- . . . -->
+<p class="box-empty">
+<span> </span>
+</p>
+<p><span class="lightgray">Evaluamos diferentes escenarios de procesamiento: variando la herramienta usada, el volumen de los datos y la cantidad de variables auxiliares creadas, en</span> <strong>diferentes etapas.</strong></p>
+<div class="fragment">
 <div class="medium-par">
-<p><br><br></p>
+<p class="box-empty">
+<span> </span>
+</p>
 <table>
 <colgroup>
 <col style="width: 23%">
@@ -742,51 +856,12 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 </tbody>
 </table>
 </div>
-</section>
-<section id="tests-herramienta-de-procesamiento" class="slide level2">
-<h2>Tests: Herramienta de procesamiento</h2>
-<div class="medium-par">
-<p><br><br></p>
-<table>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 74%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Herramienta</th>
-<th>Detalle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Apache Arrow (R)</td>
-<td>Implementación de Arrow en R (analítica usando <em>dplyr</em>)</td>
-</tr>
-<tr class="even">
-<td>Apache Arrow + DuckDB (R)</td>
-<td>Implementación de Arrow en R (analítica usando <em>dplyr</em>). Algunas operaciones ejecutadas usando DuckDB</td>
-</tr>
-<tr class="odd">
-<td>Apache Arrow + (Python)</td>
-<td>Implementación de Arrow en Python (PyArrow). Analítica usando sintaxis de Arrow.</td>
-</tr>
-<tr class="even">
-<td>Data Table (R)</td>
-<td>Librería Data.table de R</td>
-</tr>
-<tr class="odd">
-<td>Apache Spark (R)</td>
-<td>Implementación de Spark en R (librería <em>sparklyr</em>)</td>
-</tr>
-</tbody>
-</table>
 </div>
 </section>
 <section id="código-procesamiento-cargar-data" class="slide level2">
 <h2>Código procesamiento: Cargar data</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-1-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-1-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-1-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-1-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-1-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-1-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
@@ -855,7 +930,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-homologar-variables" class="slide level2">
 <h2>Código procesamiento: Homologar variables</h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-2-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-2-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-2-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-2-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-2-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-2-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <div class="cell">
@@ -951,7 +1026,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-crear-índices" class="slide level2">
 <h2>Código procesamiento: Crear índices</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><span class="medium-par">Data Table (R)</span></a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><span class="small-par">Data Table (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell">
@@ -964,7 +1039,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-crear-variables" class="slide level2">
 <h2>Código procesamiento: Crear variables</h2>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-4-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-4-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-4-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-4-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-4-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-4-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
 <div class="cell">
@@ -1050,7 +1125,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-merge-variables" class="slide level2">
 <h2>Código procesamiento: Merge variables</h2>
 <div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-5-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-5-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-5-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-5-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-5-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-5-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1">
 <div class="cell">
@@ -1094,7 +1169,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-left-join" class="slide level2">
 <h2>Código procesamiento: Left join</h2>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-6-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-6-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-6-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-6-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-6-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-6-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
 <div class="cell">
@@ -1134,7 +1209,7 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <section id="código-procesamiento-exportar-data" class="slide level2">
 <h2>Código procesamiento: Exportar data</h2>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1"><span class="medium-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-7-2"><span class="medium-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-7-3"><span class="medium-par">Data Table (R)</span></a></li><li><a href="#tabset-7-4"><span class="medium-par">Apache Spark (R)</span></a></li></ul>
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1"><span class="small-par">Apache Arrow (R) [+DuckDB]</span></a></li><li><a href="#tabset-7-2"><span class="small-par">Apache Arrow (Python)</span></a></li><li><a href="#tabset-7-3"><span class="small-par">Data Table (R)</span></a></li><li><a href="#tabset-7-4"><span class="small-par">Apache Spark (R)</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="cell">
@@ -1186,6 +1261,38 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 </div>
 </div>
 </div>
+
+<!-- ## Resultados
+
+::: {.panel-tabset}
+
+### [1]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_no_aum.png" width="100%"/>  
+
+### [2]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_05M.png" width="100%"/>  
+
+### [3]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M.png" width="100%"/>  
+
+
+### [4]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_no_aum_var_aum1X.png" width="100%"/>  
+
+### [5]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_05M_var_aum1X.png" width="100%"/>  
+
+
+### [6]{.small-par}
+
+<img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M_var_aum1X.png" width="100%"/>  
+
+::: -->
 </section>
 <section id="resultados-data-sin-aumentar" class="slide level2">
 <h2>Resultados: Data sin aumentar</h2>
@@ -1211,18 +1318,33 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 <h2>Resultados: Data aumentado +10M + variables 2X</h2>
 <p><img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_data_aum_10M_var_aum1X.png" width="100%"></p>
 </section>
+<section id="resultados-todos-los-tests" class="slide level2">
+<h2>Resultados: Todos los tests</h2>
+<p><img src="imagenes/test_eficiencia_censo_datatable_vs_spark_vs_arrow_vs_arrowdb_vs_pyarrow_test_1.png" width="110%"></p>
+</section>
 <section id="conclusión" class="slide level2">
 <h2>Conclusión</h2>
 <div class="medium-par">
 <ul>
-<li><p>Some observations on test results.</p></li>
-<li><p>Best test ?</p></li>
+<li class="fragment">La implementación de <em>Spark</em> usada no escala eficientemente ni al aumentar los datos ni al incrementar el número de variables.
+<ul>
+<li class="fragment">Los efectos de usar <em>Spark</em> debieran ser más notorios al usar un cluster más poderoso: varias máquinas con más RAM, comparado con 1 cluster (máquina local) usado para este test.</li>
+</ul></li>
+<li class="fragment">El procesamiento con <em>Arrow + DuckDB</em> es más rápido que con <em>data.table</em> para los tests menos exigentes, lo que se invierte para los test más exigentes (con mayor aumento de datos o de variables calculadas).
+<ul>
+<li class="fragment">Esto demuestra que <em>DuckDB</em> no escala eficientemente, e incluso es más lento que <em>Spark</em>, para las queries más exigentes.</li>
+</ul></li>
+<li class="fragment">Los procesamientos más rápidos se obtienen al usar las implementaciones de <em>Arrow</em> en R y Python.
+<ul>
+<li class="fragment">Siendo más rápida la de R por una diferencia que se incrementa para los tests más exigentes (con más datos y más variables calculadas).</li>
+<li class="fragment">Esto puede deberse a que Arrow en R usa <em>dplyr</em>, mientras que en Python se usó sintaxis nativa de <em>Arrow</em>…<strong>TODO</strong></li>
+</ul></li>
 </ul>
 </div>
 </section>
 <section id="referencias" class="slide level2">
 <h2>Referencias</h2>
-<p>TODO: Agregar referencias a documentación de herramientas / algoritmos</p>
+<p><strong>TODO</strong>: Agregar referencias a documentación de herramientas / algoritmos</p>
 <div class="medium-par">
 <ul>
 <li><a href="https://r4ds.had.co.nz/">R for Data Science, de Hadley Wickham</a></li>
@@ -1241,23 +1363,10 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
  ![](imagenes/logo_portada2.png){.center style="width: 20%;"}   
 --->
 <p><img src="imagenes/logo_portada2.png" width="20%"></p>
-<p><span class="big-par center-justified"><strong>Grandes Volúmenes de Datos</strong></span></p>
+<p><span class="big-par center-justified"><strong>Mentoría Grandes Volúmenes de Datos</strong></span></p>
 <p><span class="big-par center-justified"><strong>Proyecto Ciencia de Datos</strong></span></p>
 <p><span class="big-par center-justified"><strong>Octubre 2023</strong></span></p>
 <p><span class="linea-superior"></span> <span class="linea-inferior"></span></p>
-<!---
- ## Polar Axis  
-
-For a demonstration of a line plot on a polar axis, see @fig-polar.
-
-
-::: {.cell}
-::: {.cell-output-display}
-![A line plot on a polar axis, not a bear](presentacion_datos_grandes_files/figure-revealjs/fig-polar-1.png){#fig-polar width=614}
-:::
-:::
-
---->
 <p><img src="imagenes/logo_portada2.png" class="slide-logo"></p>
 <div class="footer footer-default">
 

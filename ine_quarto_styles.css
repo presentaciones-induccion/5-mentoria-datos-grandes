@@ -120,7 +120,6 @@ Settings for text format
   color: #4a25db;
 }
 
-
 .small-par { /* párrafo pequeño*/
   font-size: 22px !important;
 }
@@ -192,6 +191,28 @@ blockquote {
   text-align: justify;
 }
 
+.box-empty {
+  /* background-color: lightgrey; */
+  width: 0px;
+  height: 1px;
+  /* border: 15px solid green; */
+  padding: 0px;
+  margin: 0px;
+}
+
+.box-empty-2 {
+  /* background-color: lightgrey; */
+  width: 0px;
+  height: 0px;
+  /* border: 15px solid green; */
+  padding: 0px;
+  margin: 0px;
+}
+
+/* #tests-herramienta-de-procesamiento > div > p
+
+<p><span class="box">“”</span></p> */
+
 /* .center-justified {
   text-align: justify;
   text-align-last: center;
@@ -258,6 +279,10 @@ Settings for colors
 
 .red{
   color: red;
+}
+
+.lightgray{
+  color: lightgray;
 }
 
 
