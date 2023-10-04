@@ -1093,29 +1093,32 @@ Aumentado +10M. Variables 2X  Dataset con 10M de registros repetidos
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-13|14-23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># read feather</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>columns_in <span class="ot">=</span> [</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="st">"NHOGAR"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="st">"P07"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="st">"P08"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="st">"P09"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="st">"P11"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8"></a>  ...</span>
-<span id="cb2-9"><a href="#cb2-9"></a>]</span>
-<span id="cb2-10"><a href="#cb2-10"></a>filename <span class="ot">&lt;-</span> <span class="st">"Microdato_Censo2017-Personas__data_no_aumentado_arrow_withnrow.feather"</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>persona <span class="ot">=</span> <span class="fu">ft.read_table</span>(filename, <span class="at">columns=</span>columns_in) <span class="co"># returns pyarrow.Table</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co"># persona = ft.read_feather(filename) # returns pandas.DataFrame</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># create dataset</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>path_dataset <span class="ot">=</span> f<span class="st">"{ubi}test_pyarrow_dataset_in_tmp"</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>partitioning <span class="ot">=</span> [<span class="st">"REGION"</span>,<span class="st">"PROVINCIA"</span>]</span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="fu">ds.write_dataset</span>(</span>
-<span id="cb2-18"><a href="#cb2-18"></a>    persona,</span>
-<span id="cb2-19"><a href="#cb2-19"></a>    <span class="at">base_dir=</span>path_dataset,</span>
-<span id="cb2-20"><a href="#cb2-20"></a>    <span class="at">format=</span><span class="st">"feather"</span>,</span>
-<span id="cb2-21"><a href="#cb2-21"></a>    <span class="at">partitioning=</span>partitioning,</span>
-<span id="cb2-22"><a href="#cb2-22"></a>    <span class="at">existing_data_behavior=</span><span class="st">"delete_matching"</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-13|14-23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>import pyarrow.dataset as ds</span>
+<span id="cb2-2"><a href="#cb2-2"></a>import pyarrow.feather as ft</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># read feather</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>columns_in <span class="ot">=</span> [</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="st">"NHOGAR"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="st">"P07"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  <span class="st">"P08"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="st">"P09"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="st">"P11"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  ...</span>
+<span id="cb2-12"><a href="#cb2-12"></a>]</span>
+<span id="cb2-13"><a href="#cb2-13"></a>filename <span class="ot">&lt;-</span> <span class="st">"Microdato_Censo2017-Personas__data_no_aumentado_arrow_withnrow.feather"</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>persona <span class="ot">=</span> <span class="fu">ft.read_table</span>(filename, <span class="at">columns=</span>columns_in) <span class="co"># returns pyarrow.Table</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># persona = ft.read_feather(filename) # returns pandas.DataFrame</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># create dataset</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>path_dataset <span class="ot">=</span> f<span class="st">"{ubi}test_pyarrow_dataset_in_tmp"</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>partitioning <span class="ot">=</span> [<span class="st">"REGION"</span>,<span class="st">"PROVINCIA"</span>]</span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="fu">ds.write_dataset</span>(</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    persona,</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="at">base_dir=</span>path_dataset,</span>
+<span id="cb2-23"><a href="#cb2-23"></a>    <span class="at">format=</span><span class="st">"feather"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24"></a>    <span class="at">partitioning=</span>partitioning,</span>
+<span id="cb2-25"><a href="#cb2-25"></a>    <span class="at">existing_data_behavior=</span><span class="st">"delete_matching"</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-1-3">
