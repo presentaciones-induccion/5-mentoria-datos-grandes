@@ -825,7 +825,7 @@ persona <- arrow::open_dataset(path_dataset, format=format_dataset, partitioning
 ```{r}
 #| echo: TRUE
 #| eval: FALSE
-#| code-line-numbers: "1-13|14-23"
+#| code-line-numbers: "1-16|17-26"
 
 import pyarrow.dataset as ds
 import pyarrow.feather as ft
