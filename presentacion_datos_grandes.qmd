@@ -740,7 +740,7 @@ Evaluamos diferentes escenarios de procesamiento: variando la **herramienta usad
 | Aumentado +5M  | Dataset con 5M de registros repetidos       |
 | Variables 2X   | y con el doble de variables creadas         |
 +----------------+---------------------------------------------+
-| Aumentado 10M  | Dataset con 10M de registros repetidos      |
+| Aumentado +10M  | Dataset con 10M de registros repetidos      |
 | Variables 2X   | y con el doble de variables creadas         |
 +----------------+---------------------------------------------+
 
